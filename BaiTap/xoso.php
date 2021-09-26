@@ -1,3 +1,4 @@
+<h1 style="text-align: center">XỔ SỐ KHÁNH HÒA</h1>
 <table border="1px">
 <tr>
 	<td>Giải 8</td>
