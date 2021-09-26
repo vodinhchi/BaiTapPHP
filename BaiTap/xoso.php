@@ -1,4 +1,4 @@
-<table border="1">
+<table border="1px">
 <tr>
 	<td>Giải 8</td>
 	<td style="color: red; font-size: 24; font-weight: bold;"><?php 
