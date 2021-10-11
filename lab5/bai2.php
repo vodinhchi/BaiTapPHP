@@ -13,11 +13,10 @@
 		}
 		table{
 			border: 1px solid SeaGreen;
-			/*background-color: LightGoldenRodYellow;*/
 			background-image: url(https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg);
-		    border-radius: 15px;
-		    padding: 15px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		    	border-radius: 15px;
+		    	padding: 15px;
+            		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		}
 		input{
 			background-color: AliceBlue;
@@ -50,7 +49,6 @@
 			color: black;
 			border-radius: 15px;
 		}
-
 	</style>
 </head>
 <body>
@@ -142,9 +140,7 @@ class PHAN_SO
 	$tuso_2=isset($_POST['tuso_2'])?$_POST['tuso_2']:'';
 	$mauso_2=isset($_POST['mauso_2'])?$_POST['mauso_2']:'';
 ?>
-
 <form id="form1" name="form1" method="post" action="">
-
  	<table>
  		<thead><td colspan="5"><h4>PHÉP TÍNH TRÊN PHÂN SỐ</h4></td></thead>
  		<tr>
@@ -171,12 +167,12 @@ class PHAN_SO
  		<tr>
  			<td colspan="5">
  				<fieldset>
-		    	<legend>Chọn phép tính</legend>
-		    	<input type="radio" name="pheptinh" value="cộng" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="cộng") echo 'checked'?> /> Cộng
-		      	<input type="radio" name="pheptinh" value="trừ" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="trừ") echo 'checked'?>/> Trừ
-		    	<input type="radio" name="pheptinh" value="nhân" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="nhân") echo 'checked'?>/> Nhân
-		    	<input type="radio" name="pheptinh" value="chia" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="chia") echo 'checked'?>/> Chia
-			</fieldset>
+				<legend>Chọn phép tính</legend>
+				<input type="radio" name="pheptinh" value="cộng" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="cộng") echo 'checked'?> /> Cộng
+				<input type="radio" name="pheptinh" value="trừ" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="trừ") echo 'checked'?>/> Trừ
+				<input type="radio" name="pheptinh" value="nhân" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="nhân") echo 'checked'?>/> Nhân
+				<input type="radio" name="pheptinh" value="chia" <?php if(isset($_POST['pheptinh'])&&($_POST['pheptinh'])=="chia") echo 'checked'?>/> Chia
+				</fieldset>
  			</td>
  		</tr>
  		<tr>
@@ -199,35 +195,33 @@ class PHAN_SO
 		$pheptinh=$_POST['pheptinh'];
 		switch($pheptinh)
 		{	case "cộng": 
-						$ps=new PHAN_SO();
-						$ps=$ps_1->tong($ps_2->tuso,$ps_2->mauso);
-						$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."+".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
-						break;
+				$ps=new PHAN_SO();
+				$ps=$ps_1->tong($ps_2->tuso,$ps_2->mauso);
+				$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."+".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
+				break;
 			case "trừ":
-						$ps=new PHAN_SO();
-						$ps=$ps_1->hieu($ps_2->tuso,$ps_2->mauso);
-						$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."-".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
-						break;
+				$ps=new PHAN_SO();
+				$ps=$ps_1->hieu($ps_2->tuso,$ps_2->mauso);
+				$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."-".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
+				break;
 			case "nhân":
-						$ps=new PHAN_SO();
-						$ps=$ps_1->tich($ps_2->tuso,$ps_2->mauso);
-						$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."*".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
-						break;
+				$ps=new PHAN_SO();
+				$ps=$ps_1->tich($ps_2->tuso,$ps_2->mauso);
+				$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."*".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
+				break;
 			case "chia":
-						$ps=new PHAN_SO();
-						$ps=$ps_1->thuong($ps_2->tuso,$ps_2->mauso);
-						$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."/".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
-						break;
+				$ps=new PHAN_SO();
+				$ps=$ps_1->thuong($ps_2->tuso,$ps_2->mauso);
+				$ketqua=$ps_1->get_tuso()."/".$ps_1->get_mauso()."/".$ps_2->get_tuso()."/".$ps_2->get_mauso()."=".$ps->get_tuso()."/".$ps->get_mauso();
+				break;
 		}
 		echo "Phép ".$pheptinh." là : ". $ketqua;
 	}
-	
 ?>
  			</td>
  		</tr>
  	</table>
 </form>
-
 </body>
 </html>
 
