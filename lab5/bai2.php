@@ -108,7 +108,7 @@ class PHAN_SO
 		$ps->toigian_ps();
 		return $ps;
 	}
-	//tinh thương 2 phan so
+	//tinh tich 2 phan so
 	function tich($p_tuso,$p_mauso)
 	{	$ps= new PHAN_SO();
 		$ps->khoitao_ps($p_tuso,$p_mauso);
@@ -117,14 +117,12 @@ class PHAN_SO
 		$ps->toigian_ps();
 		return $ps;
 	}
-
+	//tinh thuong 2 phan so
 	function thuong($p_tuso,$p_mauso)
 	{	$ps= new PHAN_SO();
 		$ps->khoitao_ps($p_tuso,$p_mauso);
-
 		$mautam = $ps->mauso;
 		$tutam = $ps->tuso;
-		
 		$ps->tuso=$this->tuso*$mautam;
 		$ps->mauso= $this->mauso*$tutam;
 		$ps->toigian_ps();
