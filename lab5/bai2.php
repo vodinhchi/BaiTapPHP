@@ -31,13 +31,13 @@
 			color: black;
 		}		
 		button{
-		    padding: 5px 25px;
-		    cursor: pointer;
-		    text-align: center;
-		    color: white;
-		    background-color: SeaGreen ;
-		    border-radius: 15px;
-		    box-shadow: 0 3px #999;
+			padding: 5px 25px;
+			cursor: pointer;
+			text-align: center;
+			color: white;
+			background-color: SeaGreen ;
+			border-radius: 15px;
+			box-shadow: 0 3px #999;
 		}
 		thead{
 			font-weight: bold;
@@ -45,7 +45,6 @@
 			color: tomato;
 		}		
 		fieldset {
-			/*background-color: Beige;*/
 			color: black;
 			border-radius: 15px;
 		}
