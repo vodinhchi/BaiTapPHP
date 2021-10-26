@@ -1,69 +1,54 @@
-body{
-    font-family: arial;
-   /*background-color: LemonChiffon;*/
-}
-table{
-    /*width: 50%;*/
-}
-table,tr,td{
-    border: 1px solid PaleGreen;
-    border-collapse: collapse;
-}
-td{
-    text-align: center;
-    padding: 10px 15px;
+        body {margin:0;}
+
+        div {
+          padding:10px
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #e9d8f4;
+          position: fixed;
+          top: 0;
+          position: sticky;
+          width: 100%;
+          border: 1px solid deeppink;
+        }
+
+        li {
+          float: left;
+          border-right: 1px solid #db7093;
+        }
+
+        li a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover{
+          color: white;
+          background-color: black;
+          font-weight: bold;
+          text-decoration: none;
+        }
+/*``````````````````````````*/
+.header, .footer{
+    background-image: linear-gradient(to right ,DeepPink, Blue);
+    color: white;
 }
 thead{
-    text-align: center;
-    color: white;
+    background-color: #e9d8f4;
     font-weight: bold;
-    background-color: red;
 }
-fieldset{
-    width: 400px;
-    background-color: LightSteelBlue;
-    color: black;
-    margin: 5px;
-    border-radius: 15px;
+table{
+  text-align: center;
 }
-legend{
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    padding: 5px 10px;
-}
-button{
-    font-weight: bold;
-    padding: 5px 25px;
-    cursor: pointer;
-    text-align: center;
-    color: black;
-    background-color: Cornsilk ;
-    border-radius: 15px;
-}
-input{
-    padding: 5px;
-    border-radius: 15px;
-}
-select{
-    padding: 5px;
-    border-radius: 15px;
-    width: 100%;
-}
-#mau{
-   background-color: PeachPuff;
-}
-img{
-   height: 30vw;
-}
-h1{
-    text-align: center;
-    color: ;
-}
-#fl_right{
-    text-align: right;
-}
-#table_themnv{
-    background-color: PaleGreen;
+span{
+  color: red;
+  font-style: italic;
 }
