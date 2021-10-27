@@ -38,6 +38,13 @@
 			{
 				move_uploaded_file($tmp,"image/".$ten_anh);
 			}
+			$query="UPDATE nhan_vien
+			SET ho = '$ho', ten= '$ten', ngay_sinh = '$ngay_sinh', gioi_tinh = '$gioi_tinh', dia_chi = '$dia_chi', ma_loai_nv= '$loai_nv', ma_phong = '$phong_ban', anh = '$ten_anh'
+			WHERE ma_nv = '$ma_nv'";
+		}else{
+		$query="UPDATE nhan_vien
+		SET ho = '$ho', ten= '$ten', ngay_sinh = '$ngay_sinh', gioi_tinh = '$gioi_tinh', dia_chi = '$dia_chi', ma_loai_nv= '$loai_nv', ma_phong = '$phong_ban'
+		WHERE ma_nv = '$ma_nv'";
 		}
 		$query="UPDATE nhan_vien
 		SET ho = '$ho', ten= '$ten', ngay_sinh = '$ngay_sinh', gioi_tinh = '$gioi_tinh', dia_chi = '$dia_chi', ma_loai_nv= '$loai_nv', ma_phong = '$phong_ban'
@@ -105,7 +112,7 @@
 				mysqli_free_result($result);
 			?>								
 		</select>
-		<label>Ảnh nhân viên</label><span>(Chưa sửa ảnh được)</span>
+		<label>Ảnh nhân viên</label>
 		<input type="FILE" name ="anh" value="<?php echo $anh;?>" />
 		<center><button class="btn btn-primary" type="submit" name ="capNhat">Cập nhật</button></center>
 	</div>
